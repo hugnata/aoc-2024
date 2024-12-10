@@ -1,4 +1,4 @@
-use std::iter::zip;
+use std::{fmt::Display, iter::zip};
 
 use aoc_runner_derive::{aoc, aoc_generator};
 
@@ -40,10 +40,10 @@ fn solve_part_two(input: &InputType) -> u32 {
     sum
 }
 
-pub fn part1(input: &str) -> u32 {
+pub fn part1(input: &str) -> impl Display {
     solve_part_one(&parse(input))
 }
 
-pub fn part2(input: &str) -> u32 {
+pub fn part2(input: &str) -> impl Display {
     solve_part_two(&parse(input))
 }

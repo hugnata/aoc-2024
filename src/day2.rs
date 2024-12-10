@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 use aoc_runner_derive::{aoc, aoc_generator};
 
 type InputType = Vec<Vec<i32>>;
@@ -99,10 +101,10 @@ fn solve_part_two(input: &InputType) -> u32 {
     input.iter().map(|x| is_safe_part_two(x)).filter(|x| *x == true).count() as u32
 }
 
-pub fn part1(input: &str) -> u32 {
+pub fn part1(input: &str) -> impl Display {
     solve_part_one(&parse(input))
 }
 
-pub fn part2(input: &str) -> u32 {
+pub fn part2(input: &str) -> impl Display {
     solve_part_two(&parse(input))
 }

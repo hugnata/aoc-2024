@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 use aoc_runner_derive::{aoc, aoc_generator};
 
 type Grid = Vec<Vec<char>>;
@@ -111,11 +113,11 @@ fn solve_part_two(grid: &InputType) -> u32 {
     sum
 }
 
-pub fn part1(input: &str) -> u32 {
+pub fn part1(input: &str) -> impl Display {
     solve_part_one(&parse(input))
 }
 
-pub fn part2(input: &str) -> u32 {
+pub fn part2(input: &str) -> impl Display {
     solve_part_two(&parse(input))
 }
 
