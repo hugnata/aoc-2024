@@ -39,3 +39,11 @@ fn solve_part_two(input: &InputType) -> u32 {
     }
     sum
 }
+
+pub fn part1(input: &str) -> u32 {
+    solve_part_one(&parse(input))
+}
+
+pub fn part2(input: &str) -> u32 {
+    solve_part_two(&parse(input))
+}

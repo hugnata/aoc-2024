@@ -98,3 +98,11 @@ fn solve_part_one(input: &InputType) -> u32 {
 fn solve_part_two(input: &InputType) -> u32 {
     input.iter().map(|x| is_safe_part_two(x)).filter(|x| *x == true).count() as u32
 }
+
+pub fn part1(input: &str) -> u32 {
+    solve_part_one(&parse(input))
+}
+
+pub fn part2(input: &str) -> u32 {
+    solve_part_two(&parse(input))
+}
